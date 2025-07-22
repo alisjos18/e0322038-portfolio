@@ -42,12 +42,25 @@ footer {
 }
 
 footer a {
-  color: #0077cc;
+  color: #66b2ff;
   text-decoration: none;
+  background-color: transparent;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 footer a:hover {
   text-decoration: underline;
+  background-color: #333;
+}
+
+footer section {
+  background-color: transparent;
+  display: inline-block;  /* Optional: keeps left/right sections from stacking on top of each other */
+  vertical-align: top;
+  margin: 0 1rem;
+  text-align: left;       /* Optional: aligns form labels properly */
 }
 
 @media screen and (max-width: 600px) {
