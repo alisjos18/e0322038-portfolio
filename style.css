@@ -2,13 +2,18 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #222;
+  color: white;
 }
 
 header {
-  background-color: #222;
+  background-color: #2F4F4F;
   color: white;
   padding: 2rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 h1, p {
@@ -21,6 +26,8 @@ section {
   max-width: 800px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-color: #222;
+  color: white;
 }
 
 section h2 {
@@ -48,11 +55,13 @@ footer a {
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   display: inline-block;
+  transition: color 0.3s ease-in-out;
 }
 
 footer a:hover {
   text-decoration: underline;
   background-color: #333;
+  color: #ffcc00;
 }
 
 footer section {
@@ -69,5 +78,28 @@ footer section {
   }
   header, footer, section {
     padding: 1rem;
+  }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  animation: fadeSlide 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  header, footer {
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
   }
 }
